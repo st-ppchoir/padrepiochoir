@@ -1,0 +1,18 @@
+en: &DEFAULT_EN
+  nav:
+    - title: "About"
+      section: about
+    - title: "Ministry"
+      section: services
+    - title: "History"
+      section: timeline
+    - title: "Team"
+      section: team
+    - title: "Music Scores"
+      url: /scores/
+    - title: "Blog"
+      url: /blog/
+    - title: "Join Us"
+      url: /join/
+    - title: "Contact"
+      section: contact

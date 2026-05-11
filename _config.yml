@@ -1,0 +1,27 @@
+theme: jekyll-agency
+
+url    : "" # e.g. https://yourusername.github.io
+baseurl: "" # e.g. /chorale-saint-padre-pio (if not root domain)
+
+title      : "Chorale Saint Padre Pio"
+email      : contact@choralesaintpadrepio.org
+description: "Chorale Saint Padre Pio de la Paroisse de Kansanga - Louange et musique sacrée"
+author     : "Chorale Saint Padre Pio"
+logo:
+  path: assets/img/choir-logo.png
+  height: 60
+
+locale: "en-US"
+
+analytics:
+  google: # Add Google Analytics tracking code here
+
+collections:
+  portfolio:
+    output: false
+  posts:
+    output: true
+
+permalink: /blog/:year/:month/:day/:title/
+
+markdown: kramdown

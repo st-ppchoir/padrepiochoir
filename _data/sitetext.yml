@@ -1,0 +1,102 @@
+en: &DEFAULT_EN
+  header:
+    title: "Bienvenue chez la Chorale Saint Padre Pio!"
+    text: "Voices United in Praise"
+    button: "Discover Our Choir"
+    buttonlink: "#about"
+
+  services:
+    title: "Our Ministry"
+    text: "Music is prayer twice."
+    section: services
+    list:
+      - title: "Sacred Music"
+        desc: "We lead the faithful in worship through carefully prepared liturgical songs, hymns, and sacred choral pieces during Sunday Masses and special celebrations."
+        icon: fas fa-music
+      - title: "Community & Formation"
+        desc: "Our choir is a family. We offer regular rehearsals, voice training, and spiritual formation to help every member grow in faith and musical skill."
+        icon: fas fa-users
+      - title: "Events & Concerts"
+        desc: "Throughout the year we organize choral concerts, participate in diocesan events, and welcome visiting choirs to celebrate the gift of music together."
+        icon: fas fa-calendar-alt
+
+  about:
+    title: "About Us"
+    text: "Our Story"
+    body: "The **Chorale Saint Padre Pio** was founded at the **Paroisse de Kansanga** with a single mission: to glorify God through the beauty of choral music. Named after Padre Pio — a saint known for his deep love of liturgical music — our choir brings together voices of all ages united in faith and song.\n\nWe sing at Sunday Masses, feast days, weddings, funerals, and special diocesan celebrations. Our repertoire spans traditional Latin hymns, Congolese sacred music, gospel, and contemporary worship songs.\n\nWhether you are an experienced singer or someone who simply loves to praise God with their voice, **you are welcome here**."
+    section: about
+
+  timeline:
+    title: "Our History"
+    text: "A journey of faith and song"
+    section: timeline
+    events:
+      - title: "Foundation"
+        year: "2005"
+        desc: "The Chorale Saint Padre Pio was founded at the Paroisse de Kansanga, beginning with a small group of devoted parishioners determined to enrich the liturgy with beautiful music."
+        image: assets/img/timeline/1.jpg
+        alt:
+      - title: "Growth & Recognition"
+        year: "2010"
+        desc: "Our choir grew to over 40 members and was recognized by the Diocese for its contribution to liturgical music, participating for the first time in a diocesan choral festival."
+        image: assets/img/timeline/2.jpg
+        alt:
+      - title: "First Major Concert"
+        year: "2015"
+        desc: "We organized our first standalone choral concert, drawing an audience of over 300 people and raising funds for the parish building project."
+        image: assets/img/timeline/3.jpg
+        alt:
+      - title: "Today"
+        year: "Present"
+        desc: "With more than 60 active members, the Chorale Saint Padre Pio continues to serve the Paroisse de Kansanga and the wider community with joyful, prayerful song."
+        image: assets/img/timeline/4.jpg
+        alt:
+    end: "Join Us <br> in Song <br> and Prayer!"
+
+  team:
+    title: "Our Leadership"
+    text: "The dedicated people who guide our choir"
+    subtext: ""
+    section: team
+    people:
+      - name: "Choir Director"
+        role: "Musical Director"
+        image: assets/img/team/director.jpg
+        social:
+          - url: "#"
+            icon: fas fa-envelope
+      - name: "Assistant Director"
+        role: "Voice Coach & Assistant"
+        image: assets/img/team/assistant.jpg
+        social:
+          - url: "#"
+            icon: fas fa-envelope
+      - name: "Parish Coordinator"
+        role: "Liturgy & Events"
+        image: assets/img/team/coordinator.jpg
+        social:
+          - url: "#"
+            icon: fas fa-envelope
+
+  contact:
+    title: "Contact Us"
+    text: "We would love to hear from you"
+    section: contact
+    name: "Name*"
+    name-validation: "Please enter your name."
+    email: "Email*"
+    email-validation: "Please enter your email address."
+    phone: "Phone Number"
+    phone-validation: "Please enter your phone number."
+    message: "Message*"
+    message-validation: "Please enter a message."
+    subject: "Contact Form Submission - Chorale Saint Padre Pio"
+    submit: "Send Message"
+
+  footer:
+    legal: "Privacy Policy"
+    social:
+      - url: https://facebook.com
+        icon: "fab fa-facebook-f"
+      - url: https://youtube.com
+        icon: "fab fa-youtube"

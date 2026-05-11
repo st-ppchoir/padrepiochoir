@@ -1,0 +1,21 @@
+# Color Customization - Blue & Beige theme for Chorale Saint Padre Pio
+highlight: "#1a4a8a"       # Deep blue (primary accent)
+white: "#f5f0e8"           # Warm beige (replaces white)
+black: "#0d2b5e"           # Dark navy (replaces black)
+
+# Image Customization
+header-image: "../img/header.jpg"
+contact-image: "../img/contact.jpg"
+portfolio-icon: fas fa-music fa-3x
+
+# Fonts
+fonts_urls:
+    - "https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap"
+
+fonts:
+  - name: "Montserrat"
+    for: "heading"
+  - name: "Playfair Display"
+    for: "script"
+  - name: "Lato"
+    for: "body"

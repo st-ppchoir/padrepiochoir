@@ -1,0 +1,29 @@
+---
+layout: default
+---
+<section class="page-section pt-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <article>
+          <h1 style="color:#1a4a8a;">{{ page.title }}</h1>
+          <p class="text-muted mb-4">
+            <i class="fas fa-calendar-alt me-1"></i>{{ page.date | date: "%B %d, %Y" }}
+            {% if page.author %}&nbsp;·&nbsp;<i class="fas fa-user me-1"></i>{{ page.author }}{% endif %}
+            {% if page.category %}&nbsp;·&nbsp;<i class="fas fa-tag me-1"></i>{{ page.category }}{% endif %}
+          </p>
+          {% if page.image %}
+          <img src="{{ page.image | relative_url }}" class="img-fluid rounded mb-4 w-100" alt="{{ page.title }}" style="max-height:400px;object-fit:cover;">
+          {% endif %}
+          <div class="post-content">
+            {{ content }}
+          </div>
+          <hr class="mt-5">
+          <div class="d-flex justify-content-between">
+            <a href="/blog/" class="btn btn-outline-primary">← Back to Blog</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>

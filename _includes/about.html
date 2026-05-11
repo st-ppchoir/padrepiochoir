@@ -1,0 +1,39 @@
+<!-- About -->
+{% if site.locale and site.locale != "" and site.locale != nil %}
+{% assign about = site.data.sitetext[site.locale].about %}
+{% else %}
+{% assign about = site.data.sitetext.about %}
+{% endif %}
+<section class="page-section" id="{{ about.section | default: 'about' }}">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading text-uppercase">{{ about.title | default: "About Us" }}</h2>
+        <h3 class="section-subheading text-muted">{{ about.text | default: "" }}</h3>
+      </div>
+    </div>
+    <div class="row align-items-center">
+      <div class="col-lg-5 text-center mb-4 mb-lg-0">
+        <img src="assets/img/choir-logo.png" alt="Chorale Saint Padre Pio Logo" class="img-fluid" style="max-width:280px;">
+      </div>
+      <div class="col-lg-7">
+        <p class="lead" style="line-height:1.9;">{{ about.body | markdownify }}</p>
+        <div class="row mt-4 text-center">
+          <div class="col-4">
+            <div style="font-size:2rem;font-weight:700;color:#1a4a8a;">60+</div>
+            <div class="small text-muted">Active Members</div>
+          </div>
+          <div class="col-4">
+            <div style="font-size:2rem;font-weight:700;color:#1a4a8a;">20+</div>
+            <div class="small text-muted">Years of Service</div>
+          </div>
+          <div class="col-4">
+            <div style="font-size:2rem;font-weight:700;color:#1a4a8a;">50+</div>
+            <div class="small text-muted">Songs in Repertoire</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End About -->

@@ -1,0 +1,36 @@
+<!-- Blog Preview Section -->
+<section class="page-section bg-light" id="blog-preview">
+  <div class="container">
+    <div class="text-center">
+      <h2 class="section-heading text-uppercase">Latest News</h2>
+      <h3 class="section-subheading text-muted">Updates from our choir community</h3>
+    </div>
+    <div class="row">
+      {% assign recent_posts = site.posts | limit: 3 %}
+      {% for post in recent_posts %}
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm">
+          {% if post.image %}
+          <img src="{{ post.image | relative_url }}" class="card-img-top" alt="{{ post.title }}" style="height:200px;object-fit:cover;">
+          {% else %}
+          <div style="height:200px;background:linear-gradient(135deg,#1a4a8a,#2d6cc0);display:flex;align-items:center;justify-content:center;">
+            <i class="fas fa-music fa-3x text-white opacity-50"></i>
+          </div>
+          {% endif %}
+          <div class="card-body">
+            <p class="small text-muted mb-1">{{ post.date | date: "%B %d, %Y" }}</p>
+            <h5 class="card-title" style="color:#1a4a8a;">{{ post.title }}</h5>
+            <p class="card-text text-muted">{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
+          </div>
+          <div class="card-footer bg-transparent">
+            <a href="{{ post.url | relative_url }}" class="btn btn-primary btn-sm">Read More</a>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="text-center mt-4">
+      <a href="/blog/" class="btn btn-outline-primary">View All Posts</a>
+    </div>
+  </div>
+</section>
