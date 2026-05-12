@@ -1,0 +1,58 @@
+---
+layout: default
+---
+<!-- Blog Page Header -->
+<div style="background:linear-gradient(135deg,#0d2b5e,#1a4a8a);padding:100px 0 60px;text-align:center;color:#f5f0e8;">
+  <div class="container">
+    <i class="fas fa-newspaper fa-2x mb-3" style="color:#e8d5a3;opacity:0.8;"></i>
+    <h1 style="font-size:2.8rem;font-weight:700;letter-spacing:0.05em;color:#fff;margin-bottom:10px;">NEWS & UPDATES</h1>
+    <p style="color:#e8d5a3;font-style:italic;font-size:1.1rem;">Stories, announcements, and reflections from our choir</p>
+  </div>
+</div>
+
+<!-- Blog Posts Grid -->
+<section style="padding:70px 0;background:#f5f0e8;">
+  <div class="container">
+    {% if site.posts.size == 0 %}
+    <div class="text-center py-5">
+      <i class="fas fa-pen fa-3x mb-3" style="color:#1a4a8a;opacity:0.4;"></i>
+      <p class="text-muted">No posts yet. Check back soon!</p>
+    </div>
+    {% else %}
+    <div class="row">
+      {% for post in site.posts %}
+      <div class="col-md-6 col-lg-4 mb-4">
+        <article class="card h-100" style="border:none;border-radius:10px;overflow:hidden;box-shadow:0 4px 20px rgba(13,43,94,0.1);transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 12px 32px rgba(13,43,94,0.18)';" onmouseout="this.style.transform='';this.style.boxShadow='0 4px 20px rgba(13,43,94,0.1)';">
+          <!-- Card top color bar based on category -->
+          <div style="height:5px;background:linear-gradient(90deg,#1a4a8a,#e8d5a3);"></div>
+          {% if post.image %}
+          <img src="{{ post.image }}" alt="{{ post.title }}" style="height:200px;width:100%;object-fit:cover;">
+          {% else %}
+          <div style="height:160px;background:linear-gradient(135deg,#1a4a8a 0%,#2d6cc0 100%);display:flex;align-items:center;justify-content:center;">
+            <i class="fas fa-music fa-3x" style="color:rgba(232,213,163,0.5);"></i>
+          </div>
+          {% endif %}
+          <div class="card-body" style="padding:1.5rem;background:#fff;">
+            <!-- Category badge -->
+            {% if post.category %}
+            <span style="display:inline-block;background:#e8d5a3;color:#0d2b5e;font-size:0.7rem;font-weight:700;letter-spacing:0.08em;padding:2px 10px;border-radius:20px;text-transform:uppercase;margin-bottom:10px;">{{ post.category }}</span>
+            {% endif %}
+            <h2 style="font-size:1.15rem;font-weight:700;color:#0d2b5e;margin-bottom:8px;line-height:1.4;">{{ post.title }}</h2>
+            <p style="font-size:0.82rem;color:#888;margin-bottom:12px;">
+              <i class="fas fa-calendar-alt me-1"></i>{{ post.date | date: "%B %d, %Y" }}
+              {% if post.author %}&nbsp;·&nbsp;<i class="fas fa-user me-1"></i>{{ post.author }}{% endif %}
+            </p>
+            <p style="color:#555;font-size:0.92rem;line-height:1.7;">{{ post.excerpt | strip_html | truncatewords: 28 }}</p>
+          </div>
+          <div class="card-footer" style="background:#fff;border-top:1px solid #f0ece4;padding:1rem 1.5rem;">
+            <a href="{{ post.url }}" style="color:#1a4a8a;font-weight:700;font-size:0.9rem;text-decoration:none;">
+              Read More <i class="fas fa-arrow-right ms-1" style="font-size:0.8rem;"></i>
+            </a>
+          </div>
+        </article>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+</section>
