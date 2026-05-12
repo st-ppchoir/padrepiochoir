@@ -11,7 +11,7 @@ logo:
   path: assets/img/choir-logo.png
   height: 60
 
-locale: "en-US"
+locale: "en"
 
 analytics:
   google: # Add Google Analytics tracking code here
