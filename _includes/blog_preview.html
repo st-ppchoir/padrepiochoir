@@ -1,36 +1,47 @@
-<!-- Blog Preview Section -->
-<section class="page-section bg-light" id="blog-preview">
+<!-- Latest News Section (home page) -->
+<section class="page-section" id="news" style="background:#f5f0e8;padding:80px 0;">
   <div class="container">
-    <div class="text-center">
-      <h2 class="section-heading text-uppercase">Latest News</h2>
+    <div class="text-center mb-5">
+      <h2 class="section-heading text-uppercase" style="color:#0d2b5e;">Latest News</h2>
       <h3 class="section-subheading text-muted">Updates from our choir community</h3>
+      <div style="width:60px;height:3px;background:linear-gradient(90deg,#1a4a8a,#e8d5a3);margin:0 auto;"></div>
     </div>
+
     <div class="row">
       {% assign recent_posts = site.posts | limit: 3 %}
       {% for post in recent_posts %}
       <div class="col-md-4 mb-4">
-        <div class="card h-100 shadow-sm">
+        <article class="card h-100" style="border:none;border-radius:10px;overflow:hidden;box-shadow:0 4px 20px rgba(13,43,94,0.1);">
+          <div style="height:4px;background:linear-gradient(90deg,#1a4a8a,#e8d5a3);"></div>
           {% if post.image %}
-          <img src="{{ post.image | relative_url }}" class="card-img-top" alt="{{ post.title }}" style="height:200px;object-fit:cover;">
+          <img src="{{ post.image }}" alt="{{ post.title }}" style="height:180px;width:100%;object-fit:cover;">
           {% else %}
-          <div style="height:200px;background:linear-gradient(135deg,#1a4a8a,#2d6cc0);display:flex;align-items:center;justify-content:center;">
-            <i class="fas fa-music fa-3x text-white opacity-50"></i>
+          <div style="height:140px;background:linear-gradient(135deg,#1a4a8a,#2d6cc0);display:flex;align-items:center;justify-content:center;">
+            <i class="fas fa-music fa-2x" style="color:rgba(232,213,163,0.5);"></i>
           </div>
           {% endif %}
-          <div class="card-body">
-            <p class="small text-muted mb-1">{{ post.date | date: "%B %d, %Y" }}</p>
-            <h5 class="card-title" style="color:#1a4a8a;">{{ post.title }}</h5>
-            <p class="card-text text-muted">{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
+          <div class="card-body" style="background:#fff;padding:1.4rem;">
+            {% if post.category %}
+            <span style="display:inline-block;background:#e8d5a3;color:#0d2b5e;font-size:0.68rem;font-weight:700;letter-spacing:0.08em;padding:2px 10px;border-radius:20px;text-transform:uppercase;margin-bottom:8px;">{{ post.category }}</span>
+            {% endif %}
+            <h3 style="font-size:1rem;font-weight:700;color:#0d2b5e;margin-bottom:6px;line-height:1.4;">{{ post.title }}</h3>
+            <p style="font-size:0.8rem;color:#999;margin-bottom:10px;"><i class="fas fa-calendar-alt me-1"></i>{{ post.date | date: "%B %d, %Y" }}</p>
+            <p style="color:#666;font-size:0.88rem;line-height:1.6;">{{ post.excerpt | strip_html | truncatewords: 22 }}</p>
           </div>
-          <div class="card-footer bg-transparent">
-            <a href="{{ post.url | relative_url }}" class="btn btn-primary btn-sm">Read More</a>
+          <div class="card-footer" style="background:#fff;border-top:1px solid #f0ece4;padding:0.9rem 1.4rem;">
+            <a href="{{ post.url }}" style="color:#1a4a8a;font-weight:700;font-size:0.85rem;text-decoration:none;">
+              Read more <i class="fas fa-arrow-right" style="font-size:0.75rem;"></i>
+            </a>
           </div>
-        </div>
+        </article>
       </div>
       {% endfor %}
     </div>
+
     <div class="text-center mt-4">
-      <a href="/blog/" class="btn btn-outline-primary">View All Posts</a>
+      <a href="/blog/" class="btn btn-xl" style="background:#1a4a8a;color:#f5f0e8;border:none;font-weight:700;letter-spacing:0.08em;">
+        <i class="fas fa-newspaper me-2"></i>View All Posts
+      </a>
     </div>
   </div>
 </section>
