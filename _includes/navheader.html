@@ -1,12 +1,11 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
     <div class="container">
-	  <a class="navbar-brand js-scroll-trigger" href="#page-top">
-          {%- if site.logo -%}
-            <img height="{{ site.logo.height | default: 52 }}" src="{{ site.logo.path }}"/>
-          {%- else -%}
-            {{ site.title }}
-          {%- endif -%}
+      <a class="navbar-brand js-scroll-trigger d-flex align-items-center" href="#page-top" style="gap:10px;">
+        {%- if site.logo -%}
+          <img height="{{ site.logo.height | default: 52 }}" src="{{ site.logo.path }}" style="border-radius:4px;"/>
+        {%- endif -%}
+        <span style="font-size:0.95rem;font-weight:700;color:#e8d5a3;letter-spacing:0.02em;line-height:1.2;">{{ site.title }}</span>
       </a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         Menu
@@ -47,36 +46,23 @@
   
   <!-- Header -->
   {% if site.locale and site.locale != "" and site.locale != nil %}
-  <header class="masthead">
-    <div class="container">
-      <div class="intro-text">
-	  {%- if site.data.sitetext[site.locale].header.title -%}
-        <div class="intro-lead-in">{{ site.data.sitetext[site.locale].header.title | markdownify }}</div>
-	  {%- endif -%}
-	  {%- if site.data.sitetext[site.locale].header.text -%}
-        <div class="intro-heading text-uppercase">{{ site.data.sitetext[site.locale].header.text | markdownify }}</div>
-	  {%- endif -%}
-	  {%- if site.data.sitetext[site.locale].header.button -%}
-        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="{{ site.data.sitetext[site.locale].header.buttonlink }}">{{ site.data.sitetext[site.locale].header.button }}</a>
-	  {%- endif -%}
-      </div>
-    </div>
-  </header>
+  {% assign hdr = site.data.sitetext[site.locale].header %}
   {% else %}
+  {% assign hdr = site.data.sitetext.header %}
+  {% endif %}
   <header class="masthead">
     <div class="container">
       <div class="intro-text">
-	  {%- if site.data.sitetext.header.title -%}
-        <div class="intro-lead-in">{{ site.data.sitetext.header.title | markdownify }}</div>
-	  {%- endif -%}
-	  {%- if site.data.sitetext.header.text -%}
-        <div class="intro-heading text-uppercase">{{ site.data.sitetext.header.text | markdownify }}</div>
-	  {%- endif -%}
-	  {%- if site.data.sitetext.header.button -%}
-        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="{{ site.data.sitetext.header.buttonlink }}">{{ site.data.sitetext.header.button }}</a>
-	  {%- endif -%}
+        {%- if hdr.title -%}
+        <div class="intro-lead-in">{{ hdr.title | markdownify }}</div>
+        {%- endif -%}
+        {%- if hdr.text -%}
+        <div class="intro-heading text-uppercase">{{ hdr.text | markdownify }}</div>
+        {%- endif -%}
+        {%- if hdr.button -%}
+        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="{{ hdr.buttonlink }}">{{ hdr.button }}</a>
+        {%- endif -%}
       </div>
     </div>
   </header>
-  {% endif %}
   <!-- End Header -->
