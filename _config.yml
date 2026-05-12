@@ -1,7 +1,7 @@
 remote_theme: raviriley/agency-jekyll-theme
 
 url    : "https://st-ppchoir.github.io" # e.g. https://yourusername.github.io
-baseurl: "/padrepiochoir" # e.g. /chorale-saint-padre-pio (if not root domain)
+baseurl: "" # e.g. /chorale-saint-padre-pio (if not root domain)
 
 title      : "Chorale Saint Padre Pio"
 email      : stpadrepiofc2022@gmail.com
@@ -25,3 +25,6 @@ collections:
 permalink: /blog/:year/:month/:day/:title/
 
 markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
