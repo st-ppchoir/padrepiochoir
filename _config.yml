@@ -1,7 +1,7 @@
-theme: jekyll-agency
+remote_theme: raviriley/agency-jekyll-theme
 
-url    : "" # e.g. https://yourusername.github.io
-baseurl: "" # e.g. /chorale-saint-padre-pio (if not root domain)
+url    : "https://st-ppchoir.github.io" # e.g. https://yourusername.github.io
+baseurl: "/padrepiochoir" # e.g. /chorale-saint-padre-pio (if not root domain)
 
 title      : "Chorale Saint Padre Pio"
 email      : contact@choralesaintpadrepio.org
